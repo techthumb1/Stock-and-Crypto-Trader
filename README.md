@@ -1,6 +1,6 @@
 # Stock-and-Crypto-Trader
 
-This is a simple bot that uses the [Alpaca API](https://alpaca.markets/) to trade stocks and crypto. It is based on the [Alpaca API Python SDK](
+This is a simple bot that uses the [Alpaca API](https://alpaca.markets/) to trade stocks and crypto. It uses a PPO (Proximal Policy Opitmization), A3C (Asynchronous Advantage Actor-Critic), and DQN (Deep Q-Network) to make trades. It also uses a simple moving average to determine when to buy and sell. The bot is currently set to trade on the SPY ETF, but can be easily changed to trade on any stock or crypto.
 
 This is a trading bot for stock and crypto markets, built with Python and Flask. The bot uses machine learning algorithms to predict future stock and crypto prices, and then makes trades based on those predictions. The Flask application provides a web interface for users to configure the bot and view its performance.
 
@@ -37,3 +37,7 @@ If you want to contribute to this project, feel free to fork the repository and 
 ## License
 
 This project is licensed under the MIT License. Feel free to use and modify this code for any purpose, commercial or non-commercial.
+
+
+
+## About
