@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">  
+    <title>Stock and Crypto Prediction App - Prediction Form</title>
+  </head>
+  <body>
+    <h1>Stock and Crypto Prediction Form</h1>
+    <form method="post" action="{{ url_for('predict') }}">
+      <label for="stock_symbol">Stock Symbol:</label>
+      <input type="text" name="stock_symbol"><br>
+      <label for="start_date">Start Date:</label>
+      <input type="date" name="start_date"><br>
+      <label for="end_date">End Date:</label>
+      <input type="date" name="end_date"><br>
+      <label for="prediction_days">Prediction Days:</label>
+      <input type="text" name="prediction_days"><br>
+      <input type="submit" value="Predict">
+    </form>
+  </body>
+</html>
