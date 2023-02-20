@@ -1,11 +1,24 @@
 # Description: This is the main file for the Flask app. 
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, jsonify
+from flask_bootstrap import Bootstrap
+from flask_wtf import FlaskForm
+from wtforms import StringField, SubmitField
+from wtforms.validators import DataRequired
+import gdown
+
+
+# Create the app
 app = Flask(__name__)
 
 # Route for the home page
 @app.route("/")
 def home():
     return render_template('home.html')
+
+# Route for to run colab notebook daily
+@app.route("/run-colab")
+def run_colab():
+    gdown.download('https://colab.research.google.com/drive/1MLHV-gJ4_MbASHn26oEvWMj07QK2_8uv?usp=share_link', 'FinRL_Ensemble_StockTrading_ICAIF_2023.ipynb', quiet=False)
 
 
 # Route for the prediction page
@@ -25,3 +38,4 @@ def predict():
 # Run the app
 if __name__ == "__main__":
     app.run(debug=True)
+ 
