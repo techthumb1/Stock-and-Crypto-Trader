@@ -14,8 +14,8 @@ from stable_baselines.common.vec_env import DummyVecEnv
 from stable_baselines import PPO2
 
 # Set up Alpaca API key and secret
-API_KEY = 'PKGJCV9CSJOXJQHYE50B' #Paper Trading
-API_SECRET = 'yWOjhbzsbcjIF4K4XKzDUCNiyyX1nkHhDTImd7tn' #Paper Trading
+API_KEY = 'ALPACA_API_KEY' #Paper Trading
+API_SECRET = 'ALPACA_SECRET_KEY' #Paper Trading
 api = tradeapi.REST(API_KEY, API_SECRET, api_version='v2')
 
 # Load historical data for Apple stock

@@ -1,9 +1,8 @@
-# Description: This is the main file for the Flask app. 
 from flask import Flask, render_template, request, jsonify
-from flask_bootstrap import Bootstrap
-from flask_wtf import FlaskForm
-from wtforms import StringField, SubmitField
-from wtforms.validators import DataRequired
+#from flask_bootstrap import Bootstrap
+#from flask_wtf import FlaskForm
+#from wtforms import StringField, SubmitField
+#from wtforms.validators import DataRequired
 import gdown
 
 
@@ -19,6 +18,7 @@ def home():
 @app.route("/run-colab")
 def run_colab():
     gdown.download('https://colab.research.google.com/drive/1MLHV-gJ4_MbASHn26oEvWMj07QK2_8uv?usp=share_link', 'FinRL_Ensemble_StockTrading_ICAIF_2023.ipynb', quiet=False)
+    return jsonify(message='colab notebook ran successfully')
 
 
 # Route for the prediction page
